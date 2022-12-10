@@ -1,0 +1,41 @@
+
+.armarios{
+    border-style:inset;
+    border-width: 3px;
+    border-color: #E5AB2B;
+}
+
+.home{
+ border: none;
+}
+
+.grade-armarios{
+    width: 90%;
+
+}
+h2{
+    margin: 30px 0px 20px 10px;
+
+}
+
+.botoes{
+    background-color: #D9D9D9;
+    border-style: inset;
+    border-radius: 17px;
+    border: none;
+    width: 45px;
+    height: 50px;
+    margin: 10px;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    
+}
+.botoes:hover{
+    background-color: #E5AB2B;
+}
+
+.botoes:active{
+    background-color: #E5AB2B;
+    border-color: #D9D9D9;
+}

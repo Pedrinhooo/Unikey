@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/cadastros.css">
+    <title>Cadastros</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="/img/logo.svg">
+        <h1>UNIKEY</h1>
+        <nav>
+            <a class="user" href="#">PERFIL</a>
+            <a class="config" href="#">CONFIG</a>
+        </nav>
+    </header>
+    <div class="divisao">
+        <nav>
+            <div class="home">
+                <a class="nav-pic-logo" href="/html/home.html">
+                    <img src="/img/logo-home.svg">
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="novo-cadastro">
+                <a class="nav-pic" href="#">
+                    <img src="/img/adicionar-usuario.png">
+                    <p>Cadastrar</p>
+                </a>
+            </div>
+            <div class="armarios">
+                <a class="nav-pic" href="/html/armarios.html">
+                    <img src="/img/armarios (1).png">
+                    <p>Armários</p>
+                </a>
+            </div>
+        </nav>
+        <section>
+            
+            <h2>CADASTRO DE PESSOA</h2>
+            <form action="/">
+                <div class="caixa-um">
+                    <label for="/">Nome</label>
+                <input type="text">
+                <label for="/">Nº de Matricula</label>
+                <input type="text">
+                <label for="usuario">Usuário</label>
+                <select name="usuario" id="usuario">
+                    <option value="aluno">Aluno</option>
+                    <option value="professor">Professor</option>
+                    <option value="visitante">Visitante</option>
+                </select>
+                </div>
+                <div class="caixa-dois">
+                    <label for="/">Endereço de E-mail</label>
+                <input type="email">
+                <label for="/">Telefone</label>
+                <input type="tel">
+                </div>
+            </form>
+            <button>CADASTRAR</button>
+            
+        </section>
+    </div>
+   
+</body>
+</html>
