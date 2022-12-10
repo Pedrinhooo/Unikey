@@ -112,9 +112,11 @@ h2{
     border-radius: 13px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px 0px;
 }
-.novo-cadastro a, .cadastros a, .armarios-1 a{
+
+.novo-cadastro a, .cadastros a, .armarios-1 a, .novo-cadastro-1 a{
     text-decoration: none;
     text-align: center;
+    text-decoration: none;
 }
 .funcionalidades p{
     color: white;

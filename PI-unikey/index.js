@@ -1,1 +1,0 @@
-document.getElementsByClassName('botoes').setAttribute('style', 'background: #E5AB2B; color: #E5AB2B;');
