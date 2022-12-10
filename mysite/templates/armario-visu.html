@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/mysite/static/cadastros.css">
-    <title>Cadastros</title>
+    <link rel="stylesheet" href="/mysite/static/armario-visu.css">
+    <title>Visualização</title>
 </head>
 <body>
     <header>
@@ -36,33 +36,37 @@
                 </a>
             </div>
         </nav>
-        <section>
-            
-            <h2>CADASTRO DE PESSOA</h2>
+    
+        <section>     
+            <h2>ARMÁRIO</h2>
             <form action="/">
-                <div class="caixa-um">
+                    <label for="/">E-mail</label>
+                    <input type="text" class="input-nome">
                     <label for="/">Nome</label>
-                <input type="text">
-                <label for="/">Nº de Matricula</label>
-                <input type="text">
-                <label for="usuario">Usuário</label>
-                <select name="usuario" id="usuario">
-                    <option value="aluno">Aluno</option>
-                    <option value="professor">Professor</option>
-                    <option value="visitante">Visitante</option>
-                </select>
-                </div>
-                <div class="caixa-dois">
-                    <label for="/">Endereço de E-mail</label>
-                <input type="email">
-                <label for="/">Telefone</label>
-                <input type="tel">
-                </div>
+                    <input type="text" class="input-nome">
+                    <div class="form-group">
+                        <div class="group-1">
+                            <label for="usuario">Telefone</label>
+                            <input type="text" class="input-outros">
+                        </div>
+                        <div class="group-2">
+                            <label for="usuario">Matricula</label>
+                            <input type="text" class="input-outros">
+                        </div>
+                        <div class="group-3">
+                            <label for="usuario">Tipo Usuário</label>
+                            <select name="usuario" id="usuario">
+                                <option value="aluno">Aluno</option>
+                                <option value="professor">Professor</option>
+                                <option value="visitante">Visitante</option>
+                            </select>
+                        </div>
+                        
+                    </div>
             </form>
-            <button>CADASTRAR</button>
-            
+            <button class="but-cancelar">CANCELAR ALUGUEL</button>
+    
         </section>
     </div>
-   
 </body>
 </html>

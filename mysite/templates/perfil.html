@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/mysite/static/home.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="/mysite/static/perfil.css">
+    <title>Perfil</title>
 </head>
 <body>
     <header>
@@ -36,29 +36,25 @@
                 </a>
             </div>
         </nav>
-        <section>
-            <h2>FUNCIONALIDADES</h2>
-            <div class="funcionalidades">
-                <div class="novo-cadastro-1">
-                    <a class="img-cadastro" href="/mysite/templates/cadastros.html">
-                        <img src="/mysite/static/img/adicionar-usuario.png">
-                        <p>Novo Cadastro</p>
-                    </a>
-                </div>
-                <div class="cadastros">
-                    <a class="img-cadastros" href="/mysite/templates/cadastrados.html">
-                        <img src="/mysite/static/img/search.png">
-                        <p>Cadastros</p>
-                    </a>
-                </div>
-                <div class="armarios-1">
-                    <a class="img-armarios" href="/mysite/templates/armarios.html">
-                        <img src="/mysite/static/img/armarios (1).png">
-                        <p>Armários</p>
-                    </a>
-                </div>
-            </div>
+    
+        <section>     
+            <h2>PERFIL</h2>
+            <form action="/">
+                    <label for="/">Login</label>
+                    <input type="text" class="input-login">
+                    <label for="/">Senha</label>
+                    <input type="text" class="input-senha">
+                    <button class="but-senha">Nova Senha</button>
+                    <label for="usuario">Nova Senha</label>
+                    <input type="text" class="input-newsenha">
+
+            </form>
+        <div class="botoes">
+            <button class="but-salvar">SALVAR</button>
+            <button class="but-sair">SAIR</button>
+        </div>
+        
         </section>
     </div>
-    </body>
+</body>
 </html>
