@@ -42,27 +42,30 @@
             <form action="/" method="post">
                 <div class="caixa-um">
                     <label for="/">Nome</label>
-                <input type="text">
+                <input name="nomePessoa" id="nomePessoa" type="text">
                 <label for="/">Nº de Matricula</label>
-                <input type="text">
+                <input name="NumMatricula" id="numMatricula" type="text">
                 <label for="usuario">Usuário</label>
                 <select name="usuario" id="usuario">
-                    <option value="aluno">Aluno</option>
-                    <option value="professor">Professor</option>
-                    <option value="visitante">Visitante</option>
+                    <option name="aluno" id="aluno" value="aluno">Aluno</option>
+                    <option name="professor" id="professor" value="professor">Professor</option>
+                    <option name="visitante" id="visitante" value="visitante">Visitante</option>
                 </select>
                 </div>
                 <div class="caixa-dois">
                     <label for="/">Endereço de E-mail</label>
-                <input type="email">
+                <input name="emailPessoa" id="emailPessoa" type="email">
                 <label for="/">Telefone</label>
-                <input type="tel">
+                <input name="telPessoa" id="telPessoa" type="tel">
                 </div>
+                
             </form>
-            <button>CADASTRAR</button>
+            <button type="submit" id="cadastrarPessoa">CADASTRAR</button>
             
         </section>
     </div>
     <script type="module" src="../static/img/index.html"></script>
+    <script src="../static/cadastros.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
 </body>
 </html>
