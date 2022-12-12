@@ -176,7 +176,7 @@ label{
 }
 .user{
     border-color: #E5AB2B;
+    border-style: inset;
     border-radius: 25px;
-    color: black;
     padding: 7px 5px 7px 5px;
 }
