@@ -1,6 +1,6 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-  import { getFirestore } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+  import { getDatabase, set, ref ,push, child, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -19,6 +19,42 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
+  const db = getDatabase(app);
 
-  console.log(app);
+  button-register.addEventListener('click',(e) => {
+    var email = document.getElementById('login').value;  
+    var senha = document.getElementById('senha').value;   
+
+    const userId = push(child(ref(database), 'users')).key;
+   
+    set(ref(database, 'users/' + userId), {
+    email: login,
+    senha: senha
+
+   });
+   alert('Registrado!');
+  });
+
+  getData.addEventListener('click',(e) => {
+
+    $('#dataTbl td').remove();
+    var rowNum = 0; 
+    const dbRef = ref(database, 'users/');
+
+    onValue(dbRef, (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+      const childKey = childSnapshot.key;
+      const childData = childSnapshot.val();
+      // ...
+      rowNum += 1; 
+      var row = "<tr><td>" + rowNum + "</td><td>" + childData.firstName + "</td><td>" + childData.lastName + "</td><td>" + childData.email + "</td></tr>"
+
+      $(row).appendTo('#dataTbl');
+      
+      });
+    }, {
+       onlyOnce: true
+    });
+
+
+  });
