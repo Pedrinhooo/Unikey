@@ -175,9 +175,8 @@ label{
     margin-left: 10px;
 }
 .user{
-    background-color: #E5AB2B;
+    border-color: #E5AB2B;
     border-radius: 25px;
-    font-family: Arial, Helvetica, sans-serif;
     color: black;
     padding: 7px 5px 7px 5px;
 }
