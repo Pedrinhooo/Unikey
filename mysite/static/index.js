@@ -1,6 +1,6 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-  import { getDatabase, set, ref ,push, child, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+  import { getFirestore, setDoc, addDoc, doc, db, collection} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -19,49 +19,29 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  const db = getDatabase(app);
+  const db = getFirestore(app);
 
-  button-register.addEventListener('click',(e) => {
-    var email = document.getElementById('login').value;  
-    var senha = document.getElementById('senha').value;   
+  cadastrarPessoa.addEventListener('click',(e) => {
+  var nomePessoa = document.getElementById("nomePessoa").value;
+  var numMatricula = document.getElementById("numMatricula").value;
+  var usuario = document.getElementById("usuario").value;
+  var emailPessoa = document.getElementById("emailPessoa").value;
+  var telPessoa = document.getElementById("telPessoa").value;  
 
-    const userId = push(child(ref(database), 'users')).key;
-   
-    set(ref(database, 'users/' + userId), {
-    email: login,
-    senha: senha
+    setDoc(collection(db, "usuarios"), {
+      numMatricula: numMatricula,
+      nomePessoa: nomePessoa,
+      usuario: usuario,
+      emailPessoa: emailPessoa,
+      telPessoa: telPessoa
 
    });
    alert('Registrado!');
   });
 
-  getData.addEventListener('click',(e) => {
+var nomePessoa, numMatricula, usuario, emailPessoa, telPessoa;
 
-    $('#dataTbl td').remove();
-    var rowNum = 0; 
-    const dbRef = ref(database, 'users/');
-
-    onValue(dbRef, (snapshot) => {
-      snapshot.forEach((childSnapshot) => {
-      const childKey = childSnapshot.key;
-      const childData = childSnapshot.val();
-      // ...
-      rowNum += 1; 
-      var row = "<tr><td>" + rowNum + "</td><td>" + childData.firstName + "</td><td>" + childData.lastName + "</td><td>" + childData.email + "</td></tr>"
-
-      $(row).appendTo('#dataTbl');
-      
-      });
-    }, {
-       onlyOnce: true
-    });
-
-
-  });
-
-  var nomePessoa, numMatricula, usuario, emailPessoa, telPessoa;
-
-function readFom() {
+/*  function readFom() {
   nomePessoa = document.getElementById("nomePessoa").value;
   numMatricula = document.getElementById("numMatricula").value;
   usuario = document.getElementById("usuario").value;
@@ -88,4 +68,4 @@ document.getElementById("cadastrarPessoa").onclick = function () {
   document.getElementById("nomePessoa").value = "";
   document.getElementById("emailPessoa").value = "";
   document.getElementById("telPessoa").value = "";
-};
+};*/

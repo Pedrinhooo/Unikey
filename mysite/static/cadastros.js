@@ -23,8 +23,8 @@ document.getElementById("cadastrarPessoa").onclick = function () {
       telPessoa: telPessoa,
     });
   alert("Usuario cadastrado");
-  document.getElementById("numMatricula").value = "";
-  document.getElementById("nomePessoa").value = "";
-  document.getElementById("emailPessoa").value = "";
-  document.getElementById("telPessoa").value = "";
+ // document.getElementById("numMatricula").value = "";
+ // document.getElementById("nomePessoa").value = "";
+ // document.getElementById("emailPessoa").value = "";
+ // document.getElementById("telPessoa").value = "";
 };

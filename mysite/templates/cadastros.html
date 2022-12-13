@@ -42,9 +42,9 @@
             <form action="/" method="post">
                 <div class="caixa-um">
                     <label for="/">Nome</label>
-                <input name="nomePessoa" id="nomePessoa" type="text">
+                <input name="nomePessoa" id="nomePessoa" type="text" required>
                 <label for="/">Nº de Matricula</label>
-                <input name="NumMatricula" id="numMatricula" type="text">
+                <input name="NumMatricula" id="numMatricula" type="text" required>
                 <label for="usuario">Usuário</label>
                 <select name="usuario" id="usuario">
                     <option name="aluno" id="aluno" value="aluno">Aluno</option>
@@ -53,11 +53,12 @@
                 </select>
                 </div>
                 <div class="caixa-dois">
-                    <label for="/">Endereço de E-mail</label>
-                <input name="emailPessoa" id="emailPessoa" type="email">
+                <label for="/">Endereço de E-mail</label>
+                <input name="emailPessoa" id="emailPessoa" type="email" required>
                 <label for="/">Telefone</label>
-                <input name="telPessoa" id="telPessoa" type="tel">
+                <input name="telPessoa" id="telPessoa" type="tel" required>
                 </div>
+                <button type="submit" id="cadastrarPessoa">CADASTRAR</button>
                 
             </form>
             <button type="submit" id="cadastrarPessoa">CADASTRAR</button>
