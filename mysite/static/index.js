@@ -28,7 +28,7 @@
   var emailPessoa = document.getElementById("emailPessoa").value;
   var telPessoa = document.getElementById("telPessoa").value;  
 
-    setDoc(collection(db, "usuarios"), {
+    addDoc(doc(db, "usuarios"), {
       numMatricula: numMatricula,
       nomePessoa: nomePessoa,
       usuario: usuario,
